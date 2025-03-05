@@ -40,21 +40,20 @@ export default function FlightsList() {
         {flights.map((flight, index) => (
           <div
             key={index}
-            className={`xl:basis-1/3 xl:pb-[15px] ${
-              index % 3 !== 0 ? "xl:pl-[20px]" : ""
-            }`}
+            className={`xl:basis-1/3 xl:pb-[15px] ${index % 3 !== 0 ? "xl:pl-[20px]" : ""
+              }`}
           >
             <div className="flex rounded-[10px] items-stretch border border-neutral-200 overflow-hidden">
               <div className="relative w-[50px] h-[60px]">
-               <div  className="xl:h-[82px] w-[52px] h-[60px] object-cover">
-               <Image
-                  src={flight.image}
-                  alt="flights"
-                  width={50}
-                  height={60}
-                  className="object-cover w-full h-full"
-                />
-               </div>
+                <div className="xl:h-[82px] w-[52px] h-[60px] object-cover">
+                  <Image
+                    src={flight.image}
+                    alt="flights"
+                    width={50}
+                    height={60}
+                    className="object-cover w-full h-full"
+                  />
+                </div>
               </div>
               <div className="px-[10px] py-[2px] xl:py-[15px]">
                 <p className="text-body-lg text-primary font-bold">{flight.title}</p>
